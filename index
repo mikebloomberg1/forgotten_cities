@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>America’s Forgotten Cities</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    :root {
+      --bg: #f8f8f8;
+      --text: #1a1a1a;
+      --accent: #c29a16;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    header {
+      background: #111;
+      color: white;
+      padding: 16px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.15rem;
+      margin: 0;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 16px;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 32px auto;
+      padding: 0 18px 60px;
+    }
+
+    h2 {
+      font-size: 1.9rem;
+      line-height: 1.25;
+      margin-bottom: 1rem;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 1.05rem;
+      margin-bottom: 1.2rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    iframe {
+      border: none;
+      border-radius: 8px;
+      margin-top: 28px;
+      width: 100%;
+      height: 460px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px 18px;
+      font-size: 0.82rem;
+      color: #666;
+      border-top: 1px solid #ddd;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Forgotten Cities</h1>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/jimby/">JIMBY</a>
+  </nav>
+</header>
+
+<main>
+
+  <h2>America’s 179 Forgotten Cities</h2>
+
+  <p>
+    In 2007, urban scholars Lorlene Hoyt and André Leroux convened a set of conversations at MIT’s 
+    Department of Urban Studies and Planning about the country’s “Forgotten Cities.” They defined 
+    these places as <strong>old</strong> (with at least 5,000 residents in 1880), <strong>small</strong> 
+    (between 15,000 and 150,000 residents), and <strong>poor</strong> (a median household income below 
+    $35,000 at the time). Their research identified 150 such cities across the United States.
+  </p>
+
+  <p>
+    In 2024, I recreated and updated that list using the same population criteria (population in 1880 
+    and in 2022) and an income threshold of <strong>17% or more below the national median household 
+    income</strong>, matching the relative standard used in the original analysis. This update finds 
+    <strong>179 Forgotten Cities</strong> today.
+  </p>
+
+  <p>
+    You can read the original 2007 paper here:
+    <a href="https://community-wealth.org/content/voices-forgotten-cities-innovative-revitalization-coalitions-america-s-older-small-cities" target="_blank">
+      Hoyt & Leroux (2007)
+    </a>.
+  </p>
+
+  <p>
+    The updated 2024 dataset was used by journalist Alec MacGillis in his 
+    <a href="https://www.propublica.org/article/election-ohio-wisconsin-michigan-pennsylvania-sherrod-brown-marcy-kaptur" target="_blank">
+      New York Times/ProPublica analysis
+    </a> 
+    on the political dynamics of America’s small cities.
+  </p>
+
+  <h3 style="margin-top:40px;">Map of Forgotten Cities</h3>
+
+  <!-- YOUR MAPBOX IFRAME EMBED -->
+  <iframe 
+    src="https://api.mapbox.com/styles/v1/mebloomberg/cm2qom1lg00b801pcc6rs5ktc.html?title=false&access_token=pk.eyJ1IjoibWVibG9vbWJlcmciLCJhIjoiY20ycWw5b3JmMTNtdTJsb21lYWZpemIyMCJ9.P-EVTtAL-ZTeKTNGCFW6Fw&zoomwheel=false#5.66/39.554/-84.71"
+    title="Forgotten Cities 2022">
+  </iframe>
+
+</main>
+
+<footer>
+  &copy; <span id="year"></span> Forgotten Cities.
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
